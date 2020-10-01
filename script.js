@@ -7,8 +7,9 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
+// Create prompt to greet and give details
+// create prompts asking about inclusion of lowercase, uppercase, numeric, and/or special characters
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
