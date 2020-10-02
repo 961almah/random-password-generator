@@ -11,6 +11,7 @@ function writePassword() {
 }
 
 function prompts() {
+  yourPassword = "";
   // Create an alert to greet and give details
   alert(
     "Hello! This is a random password generator. Please choose in the following boxes what options you wish to include in your password."
@@ -69,12 +70,17 @@ function prompts() {
 
   chosenOptions = lowerCaseLetters.concat(
     uppercaseLetters,
-    numerics,
+    numbers,
     specialCharacters
   );
-}
-// create push to store commits inside variable
-// create randomizer
-// create a loop
 
-// Add event listener to generate button
+  console.log(chosenOptions);
+
+  for (let i = 0; i < lengthChosen; i++) {
+    yourPassword += chosenOptions.charAt(
+      Math.floor(Math.random() * chosenOptions.length)
+    );
+  }
+
+  console.log(yourPassword);
+}
