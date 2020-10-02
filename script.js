@@ -19,44 +19,31 @@ function prompts() {
   } else {
     lowerCaseLetters = "";
   }
-
-  console.log(lowercaseOption);
   console.log(lowerCaseLetters);
+
+  if (confirm(uppercaseOption) === true) {
+    uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  } else {
+    uppercaseLetters = "";
+  }
+  console.log(uppercaseLetters);
+
+  if (confirm(numericOption) === true) {
+    numbers = "123456789";
+  } else {
+    numbers = "";
+  }
+  console.log(numbers);
+
+  if (confirm(specialCharactersOption) === true) {
+    specialCharacters = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~";
+  } else {
+    specialCharacters = "";
+  }
+  console.log(specialCharacters);
 }
 
 // create arrays and variables for content usage
-var specialCharacters = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~";
-
-var numbers = "0123456789";
-
-var uppercaseLetters = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
 
 // Create an alert to greet and give details
 
