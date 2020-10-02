@@ -17,8 +17,7 @@ function prompts() {
   );
 
   // create prompts asking about inclusion of lowercase, uppercase, numeric, and/or special characters
-  var lengthOption =
-    "How long would you like your password to be? Choose a number between 8 and 128 for the total number of characters.";
+
   var lowercaseOption =
     "Would you like your passowrd to include lowercase characters?";
   var uppercaseOption =
@@ -29,40 +28,51 @@ function prompts() {
     "Would you like your password to include special characters?";
 
   // create if statement to determine value of lower case letters
-  if (confirm(lowercaseOption) === true) {
-    lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
-  } else {
-    lowerCaseLetters = "";
-  }
-  console.log(lowerCaseLetters);
 
-  // create if statement to determine value of upper case letters
-  if (confirm(uppercaseOption) === true) {
-    uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var lengthChosen = prompt(
+    "How long would you like your password to be? Choose a number between 8 and 128 for the total number of characters."
+  );
+  if (lengthChosen < 8 || lengthChosen > 128) {
+    alert("Please choose a number between 8 and 128.");
   } else {
-    uppercaseLetters = "";
-  }
-  console.log(uppercaseLetters);
+    if (confirm(lowercaseOption) === true) {
+      var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
+    } else {
+      var lowerCaseLetters = "";
+    }
+    console.log(lowerCaseLetters);
 
-  // create statement to determine value of numbers
-  if (confirm(numericOption) === true) {
-    numbers = "123456789";
-  } else {
-    numbers = "";
-  }
-  console.log(numbers);
+    // create if statement to determine value of upper case letters
+    if (confirm(uppercaseOption) === true) {
+      var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    } else {
+      var uppercaseLetters = "";
+    }
+    console.log(uppercaseLetters);
 
-  // create if statment to determine value of special characters
-  if (confirm(specialCharactersOption) === true) {
-    specialCharacters = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~";
-  } else {
-    specialCharacters = "";
+    // create statement to determine value of numbers
+    if (confirm(numericOption) === true) {
+      var numbers = "123456789";
+    } else {
+      var numbers = "";
+    }
+    console.log(numbers);
+
+    // create if statment to determine value of special characters
+    if (confirm(specialCharactersOption) === true) {
+      var specialCharacters = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~";
+    } else {
+      var specialCharacters = "";
+    }
+    console.log(specialCharacters);
   }
-  console.log(specialCharacters);
+
+  chosenOptions = lowerCaseLetters.concat(
+    uppercaseLetters,
+    numerics,
+    specialCharacters
+  );
 }
-
-// Create if statements
-
 // create push to store commits inside variable
 // create randomizer
 // create a loop
