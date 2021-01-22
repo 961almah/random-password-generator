@@ -5,3 +5,5 @@ Random Password Generator is a platform for users to choose the makeup of their 
 It allows the user to generate a random combination of lowercase, uppercase, numeric and special characters of up to 128 characters.
 
 This project was designed with HTML and CSS and powered by JavaScript.
+
+You may use the application by clicking this link https://961almah.github.io/random-password-generator/
